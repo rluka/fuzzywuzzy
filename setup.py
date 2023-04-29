@@ -37,6 +37,6 @@ setup(
         'Programming Language :: Python :: 3.6',
     ],
     description='Fuzzy string matching in python',
-    long_description=open_file('README.rst').read(),
+    long_description=open_file('README.md').read(),
     zip_safe=True,
 )
