@@ -65,7 +65,8 @@ def partial_ratio(s1, s2):
         m2 = SequenceMatcher(None, shorter, long_substr)
         r = m2.ratio()
         if r > .995:
-            return 100, long_start, long_end
+            print((100, long_start, long_end))
+            return (100, long_start, long_end)
         else:
             if r >= max_score:
                 max_score = r
@@ -73,7 +74,7 @@ def partial_ratio(s1, s2):
                 ind_end = long_end
             scores.append(r)
 
-    return utils.intr(100 * max(scores)), ind_start, ind_end
+    return (utils.intr(100 * max(scores)), ind_start, ind_end)
 
 
 ##############################
