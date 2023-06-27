@@ -24,8 +24,8 @@ def validate_string(s):
 def check_for_equivalence(func):
     @functools.wraps(func)
     def decorator(*args, **kwargs):
-        if args[0] == args[1]:
-            return 100
+        #if args[0] == args[1]:
+        #    return 100
         return func(*args, **kwargs)
     return decorator
 

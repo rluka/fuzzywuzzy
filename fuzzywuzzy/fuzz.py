@@ -13,7 +13,6 @@ except ImportError:
 
 from . import utils
 
-
 ###########################
 # Basic Scoring Functions #
 ###########################
@@ -65,7 +64,6 @@ def partial_ratio(s1, s2):
         m2 = SequenceMatcher(None, shorter, long_substr)
         r = m2.ratio()
         if r > .995:
-            print((100, long_start, long_end))
             return (100, long_start, long_end)
         else:
             if r >= max_score:
